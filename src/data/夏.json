@@ -1,6 +1,5 @@
 [
-    {"name":"景点1","address":"地点1","image":"https://i.loli.net/2017/08/21/599a521472424.jpg","remark":"介绍1"},
-    {"name":"景点2","address":"地点2","image":"https://i.loli.net/2017/08/21/599a521472424.jpg","remark":"介绍2"},
-    {"name":"景点3","address":"地点3","image":"https://i.loli.net/2017/08/21/599a521472424.jpg","remark":"介绍3"},
-    {"name":"景点4","address":"地点4","image":"https://i.loli.net/2017/08/21/599a521472424.jpg","remark":"介绍4"}
+    {"name":"以高山湖泊为中心，雪峰倒映，云杉环拥，碧水似镜，风光如画。","address":"新疆","image":"/static/images/天山天池.jpeg","remark":"天山天池"},
+    {"name":"山中多飞泉瀑布和奇洞怪石，名胜古迹遍布，夏天气候凉爽，到此消暑，环境幽静，烦热顿消。","address":"江西","image":"/static/images/庐山.jpeg","remark":"庐山"},
+    {"name":"是一片人间少有的完美保留自然生态和民族传统文化的净土，自然景观和人文景观富集。","address":"云南","image":"/static/images/香格里拉.jpeg","remark":"香格里拉"}
   ]

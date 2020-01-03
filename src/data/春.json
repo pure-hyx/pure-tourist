@@ -1,6 +1,6 @@
 [
-    {"name":"景点1","address":"地点1","image":"https://i.loli.net/2017/08/21/599a521472424.jpg","remark":"介绍1"},
-    {"name":"景点2","address":"地点2","image":"https://i.loli.net/2017/08/21/599a521472424.jpg","remark":"介绍2"},
-    {"name":"景点3","address":"地点3","image":"https://i.loli.net/2017/08/21/599a521472424.jpg","remark":"介绍3"},
-    {"name":"景点4","address":"地点4","image":"https://i.loli.net/2017/08/21/599a521472424.jpg","remark":"介绍4"}
+    {"name":"下关风，上关花，下关风吹上关花。苍山雪，洱海月，洱海月映苍山雪。","address":"云南大理","image":"/static/images/苍山洱海.jpeg","remark":"苍山洱海"},
+    {"name":"白墙墨顶、舟影波光、杜鹃花开、春意盎然。廊棚和古弄堪称“双绝”，可谓难得一见，被称为“活着的千年古镇”。","address":"浙江","image":"/static/images/西塘.jpeg","remark":"西塘"},
+    {"name":"泛舟于沱江之上，感受肆意的自由；静坐在江边，聆听那动听的苗家山歌；住在古朴的老客栈，体会吊脚楼的文艺情调。","address":"湖南","image":"/static/images/凤凰古城.jpeg","remark":"凤凰古城"},
+    {"name":"寒意未尽，却已是花的海洋。远方的雪峰还有皑皑白雪，桃花已如醉霞绯云般地争相斗艳，美不胜收。","address":"西藏","image":"/static/images/林芝.jpeg","remark":"林芝"}
   ]
