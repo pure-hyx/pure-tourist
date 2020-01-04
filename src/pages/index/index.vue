@@ -22,7 +22,7 @@
     </i-grid>
     <i-panel :title="title_name">
       <view style="padding: 15px;">
-        <i-card v-for="item in top" :key="item" i-class="split" :extra="item.name" :thumb="item.image">
+        <i-card @click="goType(item)" v-for="item in top" :key="item" i-class="split" :extra="item.name" :thumb="item.image">
            <view slot="content">{{item.remark}}</view>
            <view slot="footer">{{item.address}}</view>
         </i-card>
@@ -44,7 +44,7 @@ export default {
         {title:"冬",image:"/static/images/mountains.png"},
       ],
       top: [
-        {name:"景点1",address:"地点1",image:"https://i.loli.net/2017/08/21/599a521472424.jpg",remark:"介绍1"},
+        {name:"中国最极寒地带的冰雪！最火热的欢腾！",address:"黑龙江",image:"/static/images/大兴安岭.jpeg",remark:"大兴安岭"},
         {name:"景点2",address:"地点2",image:"https://i.loli.net/2017/08/21/599a521472424.jpg",remark:"介绍2"},
         {name:"景点3",address:"地点3",image:"https://i.loli.net/2017/08/21/599a521472424.jpg",remark:"介绍3"},
         {name:"景点4",address:"地点4",image:"https://i.loli.net/2017/08/21/599a521472424.jpg",remark:"介绍4"},
@@ -65,6 +65,11 @@ export default {
     goType(type){
       console.log(type)
       let url = '../spots/main?type=' + type.title
+      mpvue.navigateTo({ url })
+    },
+    goType(type){
+      console.log(type)
+      let url = '../detail/main?type=' + type.remark
       mpvue.navigateTo({ url })
     }
   },
