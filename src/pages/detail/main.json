@@ -8,6 +8,8 @@
       "i-panel": "../../../static/dist/panel/index",
       "i-card": "../../../static/dist/card/index",
       "i-collapse": "../../../static/dist/collapse/index",
-      "i-collapse-item": "../../../static/dist/collapse-item/index"
+      "i-collapse-item": "../../../static/dist/collapse-item/index",
+      "i-steps": "../../../static/dist/steps/index",
+      "i-step": "../../../static/dist/step/index"
   }
 }

@@ -23,7 +23,7 @@
       "iconPath": "static/images/home.png",
       "selectedIconPath": "static/images/_home.png"
     }, {
-      "text": "地图",
+      "text": "分享",
       "pagePath": "pages/map/main",
       "iconPath": "static/images/map.png",
       "selectedIconPath": "static/images/_map.png"
