@@ -49,7 +49,7 @@ export default {
           remark: this.remark,
           image: 'cloud://edu-868a10.6564-edu-868a10/food/4.png'
         }
-        wx.cloud.callFunction({ name: 'new_shop', data: event }).then(
+        wx.cloud.callFunction({ name: 'new_travel', data: event }).then(
               res => {
                 console.log(res)
                 }

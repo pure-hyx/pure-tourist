@@ -8,6 +8,7 @@
 		"newFeature": true,
 		"autoAudits": false
 	},
+	"cloudfunctionRoot": "/functions/",
 	"miniprogramRoot": "dist/wx/",
 	"compileType": "miniprogram",
 	"appid": "wx7ae3c5c0b1d3a92c",

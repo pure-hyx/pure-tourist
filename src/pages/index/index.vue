@@ -13,11 +13,11 @@
     </block>
     </swiper>
     <i-grid i-class="no-border">
-    <i-grid-item @click="goType(grid)" v-for="grid in grids" :key="grid" i-class="no-border">
+    <i-grid-item @click="goList(grid.url)" v-for="grid in grids" :key="grid" i-class="no-border">
         <i-grid-icon>
             <image :src="grid.image" />
         </i-grid-icon>
-        <i-grid-label>{{grid.title}}</i-grid-label>
+        <i-grid-label>{{grid.type}}</i-grid-label>
     </i-grid-item>
     </i-grid>
     <i-panel :title="title_name">
@@ -38,17 +38,12 @@ export default {
     return {
       title_name: "热门",
       grids: [
-        {title:"春",image:"/static/images/tent.png"},
-        {title:"夏",image:"/static/images/cocktail.png"},
-        {title:"秋",image:"/static/images/cruise-ship.png"},
-        {title:"冬",image:"/static/images/mountains.png"},
+        {type:"春",image:"/static/images/tent.png","url":'../spots/main?type=1'},
+        {type:"夏",image:"/static/images/cocktail.png","url":'../spots/main?type=2'},
+        {type:"秋",image:"/static/images/cruise-ship.png","url":'../spots/main?type=3'},
+        {type:"冬",image:"/static/images/mountains.png","url":'../spots/main?type=4'},
       ],
-      top: [
-        {name:"中国最极寒地带的冰雪！最火热的欢腾！",address:"黑龙江",image:"/static/images/大兴安岭.jpeg",remark:"大兴安岭"},
-        {name:"景点2",address:"地点2",image:"https://i.loli.net/2017/08/21/599a521472424.jpg",remark:"介绍2"},
-        {name:"景点3",address:"地点3",image:"https://i.loli.net/2017/08/21/599a521472424.jpg",remark:"介绍3"},
-        {name:"景点4",address:"地点4",image:"https://i.loli.net/2017/08/21/599a521472424.jpg",remark:"介绍4"},
-      ],
+      top: [],
       imgUrls: [
         'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
         'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
@@ -62,9 +57,7 @@ export default {
   },
 
   methods: {
-    goType(type){
-      console.log(type)
-      let url = '../spots/main?type=' + type.title
+    goList (url) {
       mpvue.navigateTo({ url })
     },
     goType(type){
@@ -75,6 +68,14 @@ export default {
   },
 
   created () {
+    const db = wx.cloud.database({ env: 'pure-709fe2' })
+    db.collection('top').get().then(
+      res => {
+        console.log(res.data)
+        this.top = res.data
+      }
+    )
+
   }
 }
 </script>
