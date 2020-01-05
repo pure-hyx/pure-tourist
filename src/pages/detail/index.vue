@@ -12,19 +12,10 @@
       </swiper-item>
     </block>
     </swiper>
-    <i-panel title="线路亮点">
-    <i-collapse v-for="item in detail" :key="item" :name="item.name" >
-        <i-collapse-item :title="item.title" name="name1" >
-            <view slot="content" >{{item.remark}}</view>
-        </i-collapse-item>
-    </i-collapse>
-    <i-button @click="handleClick()" type="ghost">左边弹出1</i-button>
-    <i-drawer mode="left" :visible="showLeft1" bind:close="toggleLeft1">
-    <view class="demo-container">
-        单击遮罩层关闭
-    </view>
-    </i-drawer>
-    </i-panel>
+    <i-card  v-for="item in detail" :key="item" i-class="split" :extra="item.name" :thumb="item.image">
+      <view slot="content">{{item.remark}}</view>
+    </i-card>
+    
     
   </div>
 </template>
@@ -48,14 +39,8 @@ export default {
     console.log(this.detail)
   },
   methods: {
-    handleClick() {
-        this.setData({
-            showLeft1: !this.data.showLeft1
-        });
-      },
   },
   created () {
-    
   }
 }
 </script>
