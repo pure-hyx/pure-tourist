@@ -13,20 +13,19 @@
     </block>
     </swiper>
     <i-panel title="线路亮点">
-    <i-collapse v-for="item in detail" :key="item" :name="item.name">
-        <i-collapse-item :title="item.title" name="name1">
-            <view slot="content">{{item.remark}}</view>
+    <i-collapse v-for="item in detail" :key="item" :name="item.name" >
+        <i-collapse-item :title="item.title" name="name1" >
+            <view slot="content" >{{item.remark}}</view>
         </i-collapse-item>
     </i-collapse>
+    <i-button @click="handleClick()" type="ghost">左边弹出1</i-button>
+    <i-drawer mode="left" :visible="showLeft1" bind:close="toggleLeft1">
+    <view class="demo-container">
+        单击遮罩层关闭
+    </view>
+    </i-drawer>
     </i-panel>
-    <i-panel title="行程安排" hide-border=true>
-    <i-steps v-for="sub in route" :key="sub" >
-     <i-step status="finish" icon="barrage">
-        <view slot="title">{{sub.title}}</view>
-        <view slot="content">{{sub.content}}</view>
-     </i-step>
-    </i-steps>
-    </i-panel>
+    
   </div>
 </template>
 
@@ -34,14 +33,7 @@
 export default {
   data () {
     return {
-      route:[
-        {title:"海拉尔",content:""},
-        {title:"巴彦呼硕",content:""},
-        {title:"根河",content:""},
-        {title:"冷级村",content:""},
-        {title:"草原牧场",content:""},
-        {title:"海拉尔",content:""}
-      ],
+      showLeft1: false,
       detail:[],
       imgUrls: [
         'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
@@ -50,13 +42,20 @@ export default {
       ],
     }
   },
+  
   onLoad (option){
     this.detail = require('@/data/' + option.type + '.json')
     console.log(this.detail)
   },
   methods: {
+    handleClick() {
+        this.setData({
+            showLeft1: !this.data.showLeft1
+        });
+      },
   },
   created () {
+    
   }
 }
 </script>

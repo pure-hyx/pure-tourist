@@ -10,6 +10,8 @@
       "i-collapse": "../../../static/dist/collapse/index",
       "i-collapse-item": "../../../static/dist/collapse-item/index",
       "i-steps": "../../../static/dist/steps/index",
-      "i-step": "../../../static/dist/step/index"
+      "i-step": "../../../static/dist/step/index",
+      "i-drawer": "../../../static/dist/drawer/index",
+      "i-button": "../../../static/dist/button/index"
   }
 }
