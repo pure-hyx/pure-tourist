@@ -27,9 +27,9 @@ export default {
       showLeft1: false,
       detail:[],
       imgUrls: [
-        'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-        'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
-        'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640',
+        'cloud://pure-709fe2.7075-pure-709fe2/swiper 图片/11.jpeg',
+        'cloud://pure-709fe2.7075-pure-709fe2/swiper 图片/12.jpeg',
+        'cloud://pure-709fe2.7075-pure-709fe2/swiper 图片/13.jpeg',
       ],
     }
   },
